@@ -1,0 +1,182 @@
+{
+ "models": [
+  {
+   "file": "student.pt",
+   "model": {
+    "backbone": "vit_large_patch16_dinov3.lvd1689m",
+    "size": [
+     176,
+     96
+    ],
+    "head": "query",
+    "head_kw": {
+     "n_layers": 1
+    },
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "multi_layer": 0,
+    "mixstyle": null,
+    "keep_blocks": 0
+   }
+  },
+  {
+   "file": "hp.pt",
+   "model": {
+    "backbone": "vit_huge_plus_patch16_dinov3.lvd1689m",
+    "size": [
+     224,
+     112
+    ],
+    "head": "query",
+    "head_kw": {
+     "n_layers": 1
+    },
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "multi_layer": 0,
+    "mixstyle": null,
+    "keep_blocks": 0,
+    "pos_init": "resize",
+    "cls_pool": false
+   }
+  },
+  {
+   "file": "m1.pt",
+   "model": {
+    "backbone": "vit_large_patch14_clip_224.openai",
+    "size": [
+     224,
+     112
+    ],
+    "head": "query_text",
+    "head_kw": {
+     "n_layers": 1
+    },
+    "mean": [
+     0.48145466,
+     0.4578275,
+     0.40821073
+    ],
+    "std": [
+     0.26862954,
+     0.26130258,
+     0.27577711
+    ],
+    "multi_layer": 0,
+    "mixstyle": null,
+    "keep_blocks": 0,
+    "pos_init": "resize",
+    "cls_pool": false
+   },
+   "source": "F_clipT_w70.pt",
+   "epoch": 2
+  }
+ ],
+ "attribute_names": [
+  "Age-Young",
+  "Age-Adult",
+  "Age-Old",
+  "Gender-Female",
+  "Hair-Length-Short",
+  "Hair-Length-Long",
+  "Hair-Length-Bald",
+  "UpperBody-Length-Short",
+  "UpperBody-Color-Black",
+  "UpperBody-Color-Blue",
+  "UpperBody-Color-Brown",
+  "UpperBody-Color-Green",
+  "UpperBody-Color-Grey",
+  "UpperBody-Color-Orange",
+  "UpperBody-Color-Pink",
+  "UpperBody-Color-Purple",
+  "UpperBody-Color-Red",
+  "UpperBody-Color-White",
+  "UpperBody-Color-Yellow",
+  "UpperBody-Color-Other",
+  "LowerBody-Length-Short",
+  "LowerBody-Color-Black",
+  "LowerBody-Color-Blue",
+  "LowerBody-Color-Brown",
+  "LowerBody-Color-Green",
+  "LowerBody-Color-Grey",
+  "LowerBody-Color-Orange",
+  "LowerBody-Color-Pink",
+  "LowerBody-Color-Purple",
+  "LowerBody-Color-Red",
+  "LowerBody-Color-White",
+  "LowerBody-Color-Yellow",
+  "LowerBody-Color-Other",
+  "LowerBody-Type-Trousers&Shorts",
+  "LowerBody-Type-Skirt&Dress",
+  "Accessory-Backpack",
+  "Accessory-Bag",
+  "Accessory-Glasses-Normal",
+  "Accessory-Glasses-Sun",
+  "Accessory-Hat"
+ ],
+ "offset": [
+  2.3186940814152046,
+  -1.9104803798298768,
+  2.938018455223495,
+  0.11112551080030464,
+  -0.28557874438882136,
+  0.5076133427047985,
+  3.2783433880584836,
+  -0.19683735330033147,
+  0.49911047319720403,
+  1.7093613752494439,
+  2.570362098966796,
+  2.5551235895922306,
+  1.024211405697478,
+  4.0963466210239705,
+  2.9098291555106064,
+  2.9123912455916283,
+  2.012420751207511,
+  0.5445210253140512,
+  2.6526988486274012,
+  1.8662178864317314,
+  0.6030753614106035,
+  -0.10258922298081183,
+  0.9672298653663064,
+  2.2615527029379328,
+  3.674886172272767,
+  1.1080254373455243,
+  4.989981674751572,
+  3.3193249070632547,
+  5.522313740848557,
+  3.9879803877177475,
+  2.0986067087445965,
+  4.566772502897713,
+  2.6429741385328214,
+  -1.3093234656982164,
+  1.3083230661891974,
+  0.89629838429208,
+  0.3782505205448212,
+  1.0426389794915538,
+  3.3989490823515434,
+  2.1247355732941386
+ ],
+ "offset_scale": 0.0,
+ "tta": false,
+ "rerank": {
+  "member": "hp.pt",
+  "k": 50,
+  "alpha": 0.2
+ }
+}

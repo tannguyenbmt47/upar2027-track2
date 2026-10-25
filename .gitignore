@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+runs/
+cache/
+weights/
+UPAR-Challenge-2027/
+*.zip
+# NVIDIA C-RADIO helper files (NVIDIA license): not redistributed, upar/models/radio.py downloads them on first use
+par/upar/models/radio_nv/cls_token.py
+par/upar/models/radio_nv/vit_patch_generator.py
+submission/vendor/upar/models/radio_nv/cls_token.py
+submission/vendor/upar/models/radio_nv/vit_patch_generator.py

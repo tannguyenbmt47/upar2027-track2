@@ -1,0 +1,12 @@
+# The image the Codabench grader used for Track 2 code submissions (timm and the model code are vendored in the zip).
+#   docker build -f Dockerfile.inference -t upar-t2-infer .
+#   docker run --gpus all -v $PWD/UPAR-Challenge-2027:/workspace/UPAR-Challenge-2027 -v $PWD:/workspace/host \
+#       upar-t2-infer python scripts/check_t2.py /workspace/host/t2_v13.zip --dataset PETA
+FROM pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
+ENV PYTHONUNBUFFERED=1
+WORKDIR /workspace
+RUN pip install --no-cache-dir numpy pandas pillow
+COPY par par
+COPY submission submission
+COPY scripts scripts
+CMD ["bash"]

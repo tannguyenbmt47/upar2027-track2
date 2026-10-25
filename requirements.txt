@@ -1,0 +1,11 @@
+# Training and checks (tested with torch 2.11.0+cu128 / torchvision 0.26.0 on RTX 5090 and RTX PRO 6000).
+# The Codabench grader ran the submission in pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime (timm is vendored there).
+torch>=2.4
+torchvision
+timm==1.0.30
+numpy
+pandas
+pillow
+huggingface_hub
+# only to rebuild par/upar/models/clip_l14_text.pt with par/make_clip_text.py
+open_clip_torch==3.3.0
